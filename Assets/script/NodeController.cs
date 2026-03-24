@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -12,6 +14,9 @@ public class NodeController : MonoBehaviour
     public GameObject nodeRight;
     public GameObject nodeUp;
     public GameObject nodeDown;
+    public List<NodeController> connected = new List<NodeController>(4);
+
+    public bool readyForPathfinding = false;
     void Start()
     {
        RaycastHit2D[] hitsDown;
@@ -23,6 +28,7 @@ public class NodeController : MonoBehaviour
             {
                 canMoveDown = true;
                 nodeDown = hitsDown[i].collider.gameObject;
+                connected.Add(nodeDown.GetComponent<NodeController>());
             }
         }
 
@@ -35,6 +41,7 @@ public class NodeController : MonoBehaviour
             {
                 canMoveUp = true;
                 nodeUp = hitsUp[i].collider.gameObject;
+                connected.Add(nodeUp.GetComponent<NodeController>());
             }
         }
 
@@ -47,6 +54,7 @@ public class NodeController : MonoBehaviour
             {
                 canMoveRight = true;
                 nodeRight = hitsRight[i].collider.gameObject;
+                connected.Add(nodeRight.GetComponent<NodeController>());
             }
         }
                        
@@ -59,11 +67,12 @@ public class NodeController : MonoBehaviour
             {
                 canMoveLeft = true;
                 nodeLeft = hitsLeft[i].collider.gameObject;
+                connected.Add(nodeLeft.GetComponent<NodeController>());
             }
         }
-       
-          
-       
+
+        readyForPathfinding = true;
+
     }
 
     // Update is called once per frame
@@ -94,5 +103,10 @@ public class NodeController : MonoBehaviour
         {
             return null;
         }
+    }
+
+    internal bool HasConnected(NodeController nodeController)
+    {
+        return connected.Contains(nodeController);  
     }
 }
