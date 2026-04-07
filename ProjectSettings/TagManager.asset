@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Node
+  - Timo
+  - traps
+  - Damage
+  - Cask
+  - Power
+  - CaskSpawn
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class timoControl : MonoBehaviour
     public GameObject StartingNode;
     public GameObject nodesContainer;
     public GhostNodeStatesEnum ghostNodeStates;
+    
 
     List<NodeController> currentPath = new List<NodeController>();
 
@@ -76,7 +77,7 @@ public class timoControl : MonoBehaviour
         Debug.Log("current.connected" + current.connected.Count);
         foreach (var item in current.connected)
         {
-            Debug.Log("item " + item);
+            //Debug.Log("item " + item);
             if (IteratePathFrom(item, target))
             {
                // if (current.HasConnected(currentPath[0])==false)//niet meer nodig gezien we de startnode nu goed zetten
@@ -88,7 +89,7 @@ public class timoControl : MonoBehaviour
                 Debug.Log("found path length " + currentPath.Count);
                 foreach (NodeController n in currentPath)
                 {
-                    Debug.Log("node " + n.gameObject.name);
+                    //Debug.Log("node " + n.gameObject.name);
 
                 }
                 //we found something;
@@ -104,7 +105,7 @@ public class timoControl : MonoBehaviour
         {
             currentPath.Add(current);
             //we found a path;
-            Debug.Log("found path");
+            //Debug.Log("found path");
             return true;
 
         }
@@ -176,6 +177,9 @@ public class timoControl : MonoBehaviour
             }
         }
     }
+
+        
+  
 
     public void determineTimoDirection(string direction)
     {

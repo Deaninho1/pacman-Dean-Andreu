@@ -2,16 +2,31 @@ using UnityEngine;
 
 public class PacPlayer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    PacMove pacMove;
     void Start()
     {
-        
+        pacMove = GetComponent<PacMove>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        Debug.Log(horizontal);
+       if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            pacMove.setDirection("left");
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            pacMove.setDirection("right");
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            pacMove.setDirection("up");
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            pacMove.setDirection("down");
+        }
     }
 }

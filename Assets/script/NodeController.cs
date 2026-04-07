@@ -24,7 +24,7 @@ public class NodeController : MonoBehaviour
        for (int i = 0; i < hitsDown.Length; i++)
         {
             float distance = Mathf.Abs(hitsDown[i].point.y - transform.position.y);
-            if (distance < 1.0f)
+            if (hitsDown[i].collider.tag=="Node" && distance < 1.0f  )
             {
                 canMoveDown = true;
                 nodeDown = hitsDown[i].collider.gameObject;
@@ -37,7 +37,7 @@ public class NodeController : MonoBehaviour
        for (int i = 0; i < hitsUp.Length; i++)
         {
             float distance = Mathf.Abs(hitsUp[i].point.y - transform.position.y);
-            if (distance < 1.0f)
+            if (hitsUp[i].collider.tag=="Node" && distance < 1.0f  )
             {
                 canMoveUp = true;
                 nodeUp = hitsUp[i].collider.gameObject;
@@ -50,7 +50,7 @@ public class NodeController : MonoBehaviour
        for (int i = 0; i < hitsRight.Length; i++)
         {
             float distance = Mathf.Abs(hitsRight[i].point.x - transform.position.x);
-            if (distance < 1.0f)
+            if (hitsRight[i].collider.tag=="Node" && distance < 1.0f  )
             {
                 canMoveRight = true;
                 nodeRight = hitsRight[i].collider.gameObject;
@@ -58,12 +58,12 @@ public class NodeController : MonoBehaviour
             }
         }
                        
-                        RaycastHit2D[] hitsLeft;
+        RaycastHit2D[] hitsLeft;
        hitsLeft = Physics2D.RaycastAll(transform.position, -Vector2.right);
        for (int i = 0; i < hitsLeft.Length; i++)
         {
             float distance = Mathf.Abs(hitsLeft[i].point.x - transform.position.x);
-            if (distance < 1.0f)
+            if (hitsLeft[i].collider.tag=="Node" && distance < 1.0f  )
             {
                 canMoveLeft = true;
                 nodeLeft = hitsLeft[i].collider.gameObject;
