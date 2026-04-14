@@ -14,3 +14,5 @@ Timo begint altijd op dezelfde plek. Hij kan stil staan en na een paar seconden 
 ![gifname](finalgame.gif)
 
 hier is het uiteindelijke spel dat we gemaakt hebben er zijn een paar features weg gelaten maar ik ben alsnog heel erg blij met het resultaat.
+
+Je kan zien dat als je geen power up hebt opgepakt dat de traps damage doen en als je er wel eentje hebt opgepakt dat ze dat niet doen. nadat je een keer geen damage hebt genomen raak je de powerup kwijt. als je een power up hebt en de enemy raakt win je het spel.
