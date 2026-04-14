@@ -13,3 +13,4 @@ Timo begint altijd op dezelfde plek. Hij kan stil staan en na een paar seconden 
 
 ![gifname](finalgame.gif)
 
+hier is het uiteindelijke spel dat we gemaakt hebben er zijn een paar features weg gelaten maar ik ben alsnog heel erg blij met het resultaat.
