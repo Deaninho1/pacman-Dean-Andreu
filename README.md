@@ -11,4 +11,5 @@ als je teveel barrels oppakt in een korte tijd wordt de dizzy mechanic geactivee
 
 Timo begint altijd op dezelfde plek. Hij kan stil staan en na een paar seconden stil staan wordt hij invisible. Je kan timo niet raken in de tijd dat hij stil staat. Er zijn twee verschillende power ups een voor de vijand en de andere voor de traps.
 
+![gifname](finalgame.gif)
 
